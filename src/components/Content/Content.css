@@ -1,0 +1,19 @@
+.content-container {
+    padding: 20px;
+  }
+  
+  .content-container h3 {
+    font-size: 24px;
+    color: #333;
+  }
+  
+  .uo-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  .iframe-container iframe {
+    border: 0;
+  }
+  

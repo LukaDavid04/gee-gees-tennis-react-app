@@ -1,0 +1,16 @@
+.main-header {
+    background-color: #4E0B12;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .geegee-title {
+    font-size: 30px;
+    font-family: 'Bebas Neue', sans-serif;
+    color: white;
+  }
+  
+  .language-options img {
+    margin: 0 10px;
+  }
+  
