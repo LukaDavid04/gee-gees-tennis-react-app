@@ -5,6 +5,7 @@ function Footer() {
   return (
     <footer className="text-center text-white" style={{ backgroundColor: '#ebe9e9' }}>
       <div className="container pt-3">
+<<<<<<< HEAD
         <h6 className="connect-heading">Connect with us!</h6>
         <section className="social-icons">
           <a
@@ -29,16 +30,36 @@ function Footer() {
             target="_blank"
             rel="noopener noreferrer"
           >
+=======
+        <h6 style={{ color: '#4E0B12' }}>Connect with us!</h6>
+        <section className="mb-3">
+          <a className="btn btn-link btn-floating btn-lg text-dark m-1 social-media-icon" href="https://www.instagram.com/geegeestennis/">
+            <i className="fab fa-instagram"></i>
+          </a>
+          <a className="btn btn-link btn-floating btn-lg text-dark m-1 social-media-icon" href="https://www.tiktok.com/@geegeestennis">
+            <i className="fab fa-tiktok"></i>
+          </a>
+          <a className="btn btn-link btn-floating btn-lg text-dark m-1 social-media-icon" href="mailto:universityofottawatennis@gmail.com">
+>>>>>>> 0d42a22 (changes to the main page)
             <i className="fas fa-envelope"></i>
           </a>
         </section>
       </div>
+<<<<<<< HEAD
       <div className="footer-bottom">
         <img src="images/geegees_logo_white.png" width="40" height="35" alt="" />
+=======
+      <div className="d-flex align-items-center justify-content-center p-3" style={{ backgroundColor: '#4E0B12' }}>
+        <img className="mr-2" src="images/geegees_logo_white.png" width="35" height="30" alt="" />
+>>>>>>> 0d42a22 (changes to the main page)
         University of Ottawa Tennis Club
       </div>
     </footer>
   );
 }
 
+<<<<<<< HEAD
 export default Footer;
+=======
+export default Footer;
+>>>>>>> 0d42a22 (changes to the main page)

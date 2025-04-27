@@ -1,4 +1,5 @@
 footer {
+<<<<<<< HEAD
   background-color: #ebe9e9;
   padding: 10px 0 0 0;
   font-family: 'bebas neue';
@@ -51,3 +52,28 @@ footer h6 {
 .footer-bottom img {
   margin-right: 10px;
 }
+=======
+    background-color: #ebe9e9;
+    padding: 20px;
+  }
+  
+  .social-media-icon {
+    font-size: 30px;
+    color: #333;
+  }
+  
+  .social-media-icon:hover {
+    color: #4E0B12;
+  }
+  
+  .d-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .d-flex img {
+    margin-right: 10px;
+  }
+  
+>>>>>>> 0d42a22 (changes to the main page)

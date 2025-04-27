@@ -9,6 +9,7 @@ function Content() {
         The University of Ottawa Tennis Club (UOTC) is the bilingual tennis club of the University of Ottawa. We are open to all current students of the University of Ottawa.
       </p>
       <p>
+<<<<<<< HEAD
         Never picked up a tennis racket before? Worried you’re not good enough to join? No problem! The UOTC is composed of three divisions tailored to different players’ tennis levels; Division 1, Division 2, and Division 3. We hold semester-based tryouts for new students where our dedicated coaching staff will observe your tennis game and determine which division best suits your level of play.
       </p>
       <blockquote className="blockquote">
@@ -42,6 +43,27 @@ function Content() {
             tabIndex="0"
             title="University of Ottawa Location"
           ></iframe>
+=======
+        Never picked up a tennis racket before? No problem! The UOTC is composed of three divisions tailored to different players' tennis levels...
+      </p>
+      <blockquote className="blockquote">
+        <p className="mb-0">“Our mission is to promote the sport of tennis by getting people to pick up a tennis racket and learn to play the sport we love...”</p>
+        <footer className="blockquote-footer">
+          <cite>UOTC Executives</cite>
+        </footer>
+      </blockquote>
+
+      <h3 className="text-center"><br />About the University of Ottawa</h3>
+      <div className="uo-container">
+        <div className="text-container">
+          <p>The University of Ottawa is the largest bilingual (English-French) university in the world...</p>
+        </div>
+        <div className="iframe-container mb-4">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=..."
+            width="100%" height="200" frameborder="0" allowfullscreen=""
+            aria-hidden="false" tabindex="0" title="University of Ottawa Location"></iframe>
+>>>>>>> 0d42a22 (changes to the main page)
         </div>
       </div>
     </div>

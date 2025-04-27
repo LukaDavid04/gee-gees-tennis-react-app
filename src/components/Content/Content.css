@@ -1,4 +1,5 @@
 .content-container {
+<<<<<<< HEAD
   padding: 20px 60px;
   font-family: 'Open Sans', sans-serif;
   max-width: 100%;
@@ -77,3 +78,23 @@
   border: 0;
   border-radius: 8px;
 }
+=======
+    padding: 20px;
+  }
+  
+  .content-container h3 {
+    font-size: 24px;
+    color: #333;
+  }
+  
+  .uo-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  .iframe-container iframe {
+    border: 0;
+  }
+  
+>>>>>>> 0d42a22 (changes to the main page)

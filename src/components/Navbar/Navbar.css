@@ -1,4 +1,5 @@
 .navbar {
+<<<<<<< HEAD
   background-color:#4E0B12;
   color: white;
   padding: 10px 20px;
@@ -56,4 +57,69 @@
 .logo {
   height: 40px;
   width: auto;
+=======
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  padding: 10px;
+  position: relative; 
+}
+
+.logo-img {
+  height: 50px;
+}
+
+.nav-icon {
+  font-size: 30px;
+  color: #fff;
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.nav-links {
+  display: none;
+  flex-direction: row;
+  justify-content: space-around;
+  background-color: #333;
+  width: 100%;
+  padding: 10px 0;
+  position: absolute;
+  top: 60px;
+  left: 0;
+}
+
+.nav-links.visible {
+  display: flex;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 15px;
+  font-size: 18px;
+}
+
+.nav-links a:hover {
+  background-color: #575757;
+}
+
+.nav-links a.active {
+  background-color: #4CAF50;
+}
+
+/* Media Query for Mobile (optional, to make links stack vertically on small screens) */
+@media (max-width: 768px) {
+  .nav-links {
+    flex-direction: column; 
+    top: 70px;
+  }
+
+  .nav-links a {
+    width: 100%; 
+    text-align: center;
+  }
+>>>>>>> 0d42a22 (changes to the main page)
 }
