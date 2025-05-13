@@ -1,5 +1,8 @@
 .main-header {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 82a0524 (changes)
   position: relative;
   display: flex;
   justify-content: flex-end;
@@ -25,6 +28,7 @@
 .language-options {
   display: flex;
   gap: 10px;
+<<<<<<< HEAD
 }
 =======
     background-color: #4E0B12;
@@ -43,3 +47,6 @@
   }
   
 >>>>>>> 0d42a22 (changes to the main page)
+=======
+}
+>>>>>>> 82a0524 (changes)

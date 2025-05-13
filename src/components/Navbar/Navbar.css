@@ -1,11 +1,15 @@
 .navbar {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 82a0524 (changes)
   background-color:#4E0B12;
   color: white;
   padding: 10px 20px;
 }
 
 .navbar-header {
+<<<<<<< HEAD
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -58,50 +62,55 @@
   height: 40px;
   width: auto;
 =======
+=======
+>>>>>>> 82a0524 (changes)
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #333;
-  padding: 10px;
-  position: relative; 
 }
 
-.logo-img {
-  height: 50px;
-}
-
-.nav-icon {
-  font-size: 30px;
-  color: #fff;
+.hamburger {
+  font-size: 25px;
+  font-weight: 1000;
   background: none;
   border: none;
+  color: white;
   cursor: pointer;
-  display: inline-block;
-}
-
-.nav-links {
-  display: none;
-  flex-direction: row;
-  justify-content: space-around;
-  background-color: #333;
-  width: 100%;
-  padding: 10px 0;
-  position: absolute;
-  top: 60px;
-  left: 0;
-}
-
-.nav-links.visible {
+  line-height: 1;
   display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  margin-top: -3px;
 }
 
-.nav-links a {
+.hamburger:hover {
+  color: #35070c;
+}
+
+.nav-menu {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  margin-top: 10px;
+  padding: 10px 0;
+  background-color: #4E0B12;
+  flex-wrap: wrap;
+  border-top: 1px solid white;
+  width: 100vw;
+  margin-left: -20px;
+  margin-right: -20px;
+  padding-left: 20px; 
+  padding-right: 20px;
+}
+
+.nav-menu a {
   color: white;
   text-decoration: none;
-  padding: 10px 15px;
-  font-size: 18px;
+  padding: 5px 10px;
 }
 
+<<<<<<< HEAD
 .nav-links a:hover {
   background-color: #575757;
 }
@@ -122,4 +131,9 @@
     text-align: center;
   }
 >>>>>>> 0d42a22 (changes to the main page)
+=======
+.logo {
+  height: 40px;
+  width: auto;
+>>>>>>> 82a0524 (changes)
 }

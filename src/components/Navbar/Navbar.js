@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './Navbar.css';
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -14,11 +15,21 @@ function Navbar() {
   const navigationBar = () => {
     setIsSubheaderVisible(!isSubheaderVisible);
 >>>>>>> 0d42a22 (changes to the main page)
+=======
+const Navbar = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen((prev) => !prev);
+>>>>>>> 82a0524 (changes)
   };
 
   return (
     <nav className="navbar">
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 82a0524 (changes)
       <div className="navbar-header">
         {/* Replace text with logo image */}
         <img
@@ -34,6 +45,7 @@ function Navbar() {
         >
           &#9776;
         </button>
+<<<<<<< HEAD
       </div>
 
       {isMenuOpen && (
@@ -77,10 +89,30 @@ function Navbar() {
         <a href="sponsors.html">Sponsors</a>
         <a href="outreach.html">Outreach</a>
         <a href="FAQ.html">FAQ</a>
+=======
+>>>>>>> 82a0524 (changes)
       </div>
+
+      {isMenuOpen && (
+        <div className="nav-menu">
+          <a href="#home">HOME</a>
+          <a href="#varsity-team">VARSITY TEAM</a>
+          <a href="#recreational-team">RECREATIONAL TEAM</a>
+          <a href="#coaches">COACHES</a>
+          <a href="#executive-team">EXECUTIVE TEAM</a>
+          <a href="#club-policy">CLUB POLICY</a>
+          <a href="#sponsors">SPONSORS</a>
+          <a href="#outreach">OUTREACH</a>
+          <a href="#faq">FAQ</a>
+        </div>
+      )}
     </nav>
   );
+<<<<<<< HEAD
 }
 >>>>>>> 0d42a22 (changes to the main page)
+=======
+};
+>>>>>>> 82a0524 (changes)
 
 export default Navbar;
