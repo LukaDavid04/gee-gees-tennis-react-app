@@ -1,9 +1,13 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import './Carousel.css';
 =======
 import './Carousel.css'; // Optional: Custom CSS for styling
 >>>>>>> 0d42a22 (changes to the main page)
+=======
+import './Carousel.css';
+>>>>>>> 809056f (these are all the complete changes to the HOME)
 
 const Carousel = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -18,6 +22,7 @@ const Carousel = () => {
     'images/OUA_team.png',
   ];
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   const intervalRef = useRef(null);
 
@@ -50,50 +55,50 @@ const Carousel = () => {
     startAutoSlide();
 =======
   const intervalRef = useRef(null); // Reference for storing the interval ID
+=======
+  const intervalRef = useRef(null);
+>>>>>>> 809056f (these are all the complete changes to the HOME)
 
-  // Memoize the startAutoSlide function to prevent the warning
   const startAutoSlide = useCallback(() => {
     if (intervalRef.current) {
-      clearInterval(intervalRef.current); // Clear existing interval before starting a new one
+      clearInterval(intervalRef.current);
     }
     intervalRef.current = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
-    }, 3000); // Set interval to 3 seconds
+    }, 3000);
   }, [images.length]);
 
-  // Set up auto-sliding on mount and reset on unmount
   useEffect(() => {
-    startAutoSlide(); // Start the auto-slide when the component mounts
-
-    return () => {
-      if (intervalRef.current) {
-        clearInterval(intervalRef.current); // Clean up interval on unmount
-      }
-    };
+    startAutoSlide();
+    return () => clearInterval(intervalRef.current);
   }, [startAutoSlide]);
 
-  // Function to go to the previous slide
   const prevSlide = () => {
     setCurrentIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length);
-    startAutoSlide(); // Reset the auto-slide timer when the user clicks
+    startAutoSlide();
   };
 
-  // Function to go to the next slide
   const nextSlide = () => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
-    startAutoSlide(); // Reset the auto-slide timer when the user clicks
+    startAutoSlide();
   };
 
-  // Function to go to a specific slide
   const goToSlide = (index) => {
     setCurrentIndex(index);
+<<<<<<< HEAD
     startAutoSlide(); // Reset the auto-slide timer when the user clicks an indicator
 >>>>>>> 0d42a22 (changes to the main page)
+=======
+    startAutoSlide();
+>>>>>>> 809056f (these are all the complete changes to the HOME)
   };
 
   return (
     <div className="carousel-container">
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 809056f (these are all the complete changes to the HOME)
       <div className="carousel-track-wrapper">
         <div
           className="carousel-track"
@@ -103,6 +108,7 @@ const Carousel = () => {
             <img key={index} src={src} alt={`Slide ${index}`} className="carousel-image" />
           ))}
         </div>
+<<<<<<< HEAD
       </div>
 
 =======
@@ -113,6 +119,10 @@ const Carousel = () => {
 
       {/* Arrows to change slides */}
 >>>>>>> 0d42a22 (changes to the main page)
+=======
+      </div>
+
+>>>>>>> 809056f (these are all the complete changes to the HOME)
       <button className="arrow left" onClick={prevSlide} aria-label="Previous slide">
         &lt;
       </button>
@@ -121,9 +131,12 @@ const Carousel = () => {
       </button>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
       {/* Indicators */}
 >>>>>>> 0d42a22 (changes to the main page)
+=======
+>>>>>>> 809056f (these are all the complete changes to the HOME)
       <div className="indicators">
         {images.map((_, index) => (
           <span
@@ -131,9 +144,12 @@ const Carousel = () => {
             className={`indicator ${index === currentIndex ? 'active' : ''}`}
             onClick={() => goToSlide(index)}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
             aria-label={`Go to slide ${index + 1}`}
 >>>>>>> 0d42a22 (changes to the main page)
+=======
+>>>>>>> 809056f (these are all the complete changes to the HOME)
           ></span>
         ))}
       </div>

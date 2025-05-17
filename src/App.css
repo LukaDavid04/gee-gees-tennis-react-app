@@ -36,6 +36,7 @@ html, body {
 
 footer {
   margin-top: auto;
+<<<<<<< HEAD
 =======
 .App {
   text-align: center;
@@ -88,3 +89,6 @@ footer {
     height: auto;
   }
 >>>>>>> 0d42a22 (changes to the main page)
+=======
+}
+>>>>>>> 809056f (these are all the complete changes to the HOME)
