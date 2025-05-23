@@ -1,31 +1,41 @@
 .carousel-container {
-  margin-top: 20px; /* Add space between the carousel and the header */
-  padding-left: 20px; /* Add space on the left edge */
-  padding-right: 20px; /* Add space on the right edge */
-  max-width: 100%; /* Ensure the carousel doesn't overflow */
-}
-
-.carousel {
-  width: 100%;
-  height: 525px; /* Set a height for the carousel images */
+  margin-top: 0px;
+  margin-bottom: -15px;
+  padding: 0 20px;
+  max-width: 100%;
   overflow: hidden;
   position: relative;
-  border-radius: 10px; /* Optional: rounded corners */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: shadow effect */
+}
+
+.carousel-track-wrapper {
+  overflow: hidden;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 25 / 10;
   display: flex;
-  transition: transform 1s ease-in-out; /* Smooth slide transition */
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  width: 100%;
+  height: 100%;
 }
 
 .carousel-image {
-  width: 100%;
+  min-width: 100%;
   height: 100%;
-  object-fit: cover; /* Ensures the image fits the container while maintaining its aspect ratio */
+  object-fit: contain;
+  display: block;
+  flex-shrink: 0;
 }
 
 .arrow {
   position: absolute;
   top: 50%;
-  transform: translateY(250%);
+  transform: translateY(-50%);
   background-color: rgba(0, 0, 0, 0.5);
   color: white;
   border: none;
@@ -34,12 +44,11 @@
   font-size: 24px;
   border-radius: 50%;
   z-index: 1;
-  transition: background-color 0.3s, color 0.3s; /* Smooth transition for color change */
+  transition: background-color 0.3s, color 0.3s;
 }
 
 .arrow:hover {
-  background-color: rgba(0, 0, 0, 0.8); /* Darken the background on hover */
-  color: #fff; /* Keep the text color white */
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
 .arrow.left {
@@ -66,5 +75,5 @@
 }
 
 .indicator.active {
-  background-color: #000000;
+  background-color: #000;
 }

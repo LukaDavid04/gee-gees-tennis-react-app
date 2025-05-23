@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react';
-import './Carousel.css'; // Optional: Custom CSS for styling
+import './Carousel.css';
 
 const Carousel = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -14,55 +14,50 @@ const Carousel = () => {
     'images/OUA_team.png',
   ];
 
-  const intervalRef = useRef(null); // Reference for storing the interval ID
+  const intervalRef = useRef(null);
 
-  // Memoize the startAutoSlide function to prevent the warning
   const startAutoSlide = useCallback(() => {
     if (intervalRef.current) {
-      clearInterval(intervalRef.current); // Clear existing interval before starting a new one
+      clearInterval(intervalRef.current);
     }
     intervalRef.current = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
-    }, 3000); // Set interval to 3 seconds
+    }, 3000);
   }, [images.length]);
 
-  // Set up auto-sliding on mount and reset on unmount
   useEffect(() => {
-    startAutoSlide(); // Start the auto-slide when the component mounts
-
-    return () => {
-      if (intervalRef.current) {
-        clearInterval(intervalRef.current); // Clean up interval on unmount
-      }
-    };
+    startAutoSlide();
+    return () => clearInterval(intervalRef.current);
   }, [startAutoSlide]);
 
-  // Function to go to the previous slide
   const prevSlide = () => {
     setCurrentIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length);
-    startAutoSlide(); // Reset the auto-slide timer when the user clicks
+    startAutoSlide();
   };
 
-  // Function to go to the next slide
   const nextSlide = () => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
-    startAutoSlide(); // Reset the auto-slide timer when the user clicks
+    startAutoSlide();
   };
 
-  // Function to go to a specific slide
   const goToSlide = (index) => {
     setCurrentIndex(index);
-    startAutoSlide(); // Reset the auto-slide timer when the user clicks an indicator
+    startAutoSlide();
   };
 
   return (
     <div className="carousel-container">
-      {/* Carousel Image */}
-      <div className="carousel">
-        <img src={images[currentIndex]} alt="carousel" className="carousel-image" />
+      <div className="carousel-track-wrapper">
+        <div
+          className="carousel-track"
+          style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+        >
+          {images.map((src, index) => (
+            <img key={index} src={src} alt={`Slide ${index}`} className="carousel-image" />
+          ))}
+        </div>
       </div>
 
-      {/* Arrows to change slides */}
       <button className="arrow left" onClick={prevSlide} aria-label="Previous slide">
         &lt;
       </button>
@@ -70,14 +65,12 @@ const Carousel = () => {
         &gt;
       </button>
 
-      {/* Indicators */}
       <div className="indicators">
         {images.map((_, index) => (
           <span
             key={index}
             className={`indicator ${index === currentIndex ? 'active' : ''}`}
             onClick={() => goToSlide(index)}
-            aria-label={`Go to slide ${index + 1}`}
           ></span>
         ))}
       </div>

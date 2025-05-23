@@ -17,3 +17,18 @@ body {
     max-width: 100%;
     height: auto;
   }
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+footer {
+  margin-top: auto;
+}
