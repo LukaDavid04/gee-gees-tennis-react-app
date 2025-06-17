@@ -1,0 +1,100 @@
+.exec-banner {
+  width: 100vw;
+  height: auto;
+  max-width: 100%;
+  display: block;
+  object-fit: cover;
+  margin: 0 auto;
+}
+
+.execs-container {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.execs-title {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #4E0B12;
+}
+
+.execs-subtitle {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #4E0B12;
+}
+
+.execs-description {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #555;
+  margin-right: 50px;
+  margin-left: 50px;
+  margin-bottom: 50px;
+  margin-top: 50px;
+}
+
+.execs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  margin-right: 50px;
+  margin-left: 50px;
+}
+
+.execs-card {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+  transition: transform 0.2s ease;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.execs-card:hover {
+  transform: translateY(-5px);
+}
+
+.execs-card h3 {
+  font-size: 20px;
+  color: #4E0B12;
+  margin-bottom: 5px;
+}
+
+.execs-card h5 {
+  font-size: 1.5vw;
+  font-weight: 600;
+  margin-top: 10px;
+  color: #111;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.execs-card h6 {
+  font-size: 1.2vw;
+  font-weight: 400;
+  margin-top: -15px;
+  margin-bottom: 0px;
+  color: #666;
+  font-style: italic;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.execs-card p {
+  font-size: 16px;
+  color: #666;
+}
+
+.player-pic {
+  width: 100%;
+  max-width: 200px;
+  height: auto;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;
+}
