@@ -53,10 +53,34 @@ const execMembers = [
   {
     name: 'Ethan Leong',
     role: 'Male Captain',
-    year: '',
-    program: '',
-    hometown: '',
+    year: 'Fourth Year',
+    program: 'BSc in Human Kinetics',
+    hometown: 'Ottawa, ON, Canada',
     image: '/images/ethanBio.png',
+  },
+  {
+    name: 'Alexander Lungu',
+    role: 'Web Development',
+    year: 'Second Year',
+    program: 'BASc in Software Engineering',
+    hometown: 'Ottawa, ON, Canada',
+    image: '/images/alexBio.png',
+  },
+  {
+    name: 'Vlad Pirusca (Vestern Vee)',
+    role: 'Web Development',
+    year: 'First Year',
+    program: 'BASc in Computer Science & Mathematics',
+    hometown: 'Brasov, Romania',
+    image: '/images/vlad_bio.png',
+  },
+  {
+    name: 'Filip Popadich',
+    role: 'Web Development',
+    year: 'First year',
+    program: 'BASc in Software Engineering',
+    hometown: 'Ottawa, ON, Canada',
+    image: '/images/filipBio.jpg',
   },
 ];
 
@@ -100,10 +124,7 @@ const ExecutiveTeam = () => {
       />
     <div className="execs-content">  
       <p className="execs-description">
-        The University of Ottawa Tennis Club Executive Team is composed of ten current or alumni uOttawa students.
-        They are passionate and work hard into growing, improving, and promoting the University of Ottawa Tennis Club (UOTC).
-        Each person on the Executive Team holds a respective role: President, Treasurer, Communications, Social Media,
-        Marketing, Website Development and Male & Female Captains.
+        The University of Ottawa Tennis Club Executive Team is composed of ten current or alumni uOttawa students. They are passionate and work hard into growing, improving, and promoting the University of Ottawa Tennis Club (UOTC). Each person on the Executive Team holds a respective role: President, Treasurer, Communications, Social Media, Marketing, Website Development and Male & Female Captains.
       </p>
     </div>
 
@@ -114,34 +135,43 @@ const ExecutiveTeam = () => {
           <div className="execs-card" key={index}>
             <img src={member.image} alt={member.name} className="player-pic" />
             <h5 className="text-center">{member.name}</h5>
-            <h6 className="text-center text-muted">{member.role}</h6>
-            <div>
-              {member.year && <p className="text-center mb-0">{member.year}</p>}
+            <div className="execs-subrole">
+              <h6 className="text-center text-muted">{member.role}</h6>
+            </div>
+            <div className="execs-details">
+              {member.year && <p className="text-center subrole-year">{member.year}</p>}
               {member.program && <p className="text-center mb-0">{member.program}</p>}
-              {member.hometown && <p className="text-center mb-0"><b>Hometown:</b> {member.hometown}</p>}
+              {member.hometown && (
+                <p className="text-center mb-0"><b>Hometown:</b> {member.hometown}</p>
+              )}
             </div>
           </div>
         ))}
       </div>
-
       <br />
       <h3 className="execs-title">Honorable Mentions</h3>
       <div className="execs-grid">
         {honorableMentions.map((person, index) => (
           <div className="execs-card" key={index}>
             <img src={person.image} alt={person.name} className="player-pic" />
-            <h5 className="text-center">{person.name}</h5>
-            <h6 className="text-center text-muted">{person.role}</h6>
-            {person.description.map((para, i) => (
-              <p key={i}>{para}</p>
-            ))}
+            
+            {/* Grouping name and role for margin control */}
+            <div className="honorable-subrole">
+              <h5 className="text-center">{person.name}</h5>
+              <h6 className="text-center text-muted">{person.role}</h6>
+            </div>
+
+            {/* Description content */}
+            <div className="honorable-description">
+              {person.description.map((para, i) => (
+                <p key={i}>{para}</p>
+              ))}
+            </div>
           </div>
         ))}
       </div>
-
       <br />
       <hr />
-
       <h3 className="execs-title text-center">Members of the Executive Advisory Board</h3>
       <div className="execs-description">
         <p>

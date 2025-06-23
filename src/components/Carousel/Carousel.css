@@ -1,7 +1,7 @@
 .carousel-container {
-  margin-top: 0px;
-  margin-bottom: -15px;
-  padding: 0 20px;
+  margin-top: 0;
+  margin-bottom: -2%;
+  padding: 0 1%;
   max-width: 100%;
   overflow: hidden;
   position: relative;
@@ -10,7 +10,6 @@
 .carousel-track-wrapper {
   overflow: hidden;
   width: 100%;
-  height: auto;
   aspect-ratio: 25 / 10;
   display: flex;
   align-items: center;
@@ -24,12 +23,18 @@
   height: 100%;
 }
 
+.carousel-slide {
+  flex: 0 0 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .carousel-image {
-  min-width: 100%;
+  width: 100%;
   height: 100%;
   object-fit: contain;
   display: block;
-  flex-shrink: 0;
 }
 
 .arrow {
@@ -42,7 +47,7 @@
   border: none;
   cursor: pointer;
   z-index: 1;
-  padding: 0 10px;
+  padding: 0 25px;
   opacity: 0.6;
   transition: opacity 0.3s ease;
 }
@@ -52,23 +57,23 @@
 }
 
 .arrow.left {
-  left: 50px;
+  left: 2%;
 }
 
 .arrow.right {
-  right: 50px;
+  right: 2%;
 }
 
 .indicators {
   display: flex;
   justify-content: center;
-  margin-top: 10px;
+  margin-top: 1%;
 }
 
 .indicator {
   width: 10px;
   height: 10px;
-  margin: 0 5px;
+  margin: 0 0.5%;
   border-radius: 50%;
   background-color: rgba(0, 0, 0, 0.5);
   cursor: pointer;

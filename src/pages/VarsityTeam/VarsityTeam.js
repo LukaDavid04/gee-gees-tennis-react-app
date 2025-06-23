@@ -19,35 +19,112 @@ const players = [
   },
   {
     name: 'Vlad Pirusca (VV/Vench)',
-    role: "Vestern Vee on Spotify",
     image: '/images/vlad_bio.png',
   },
   {
     name: 'Mayssa Tebourbi',
-    role: "Alumni",
     image: '/images/mayssaBio.png',
   },
   {
     name: 'Alex Lungu',
-    role: "Edger",
     image: '/images/alexBio.png',
   },
   {
     name: 'Emma McShane',
-    role: "Alumni",
     image: '/images/placeholder_pic.png',
   },
   {
     name: 'Filip Popadich',
-    role: "Gooner",
     image: '/images/filipBio.jpg',
   },
   {
-    name: 'Filip Popadich',
-    role: "Gooner",
-    image: '/images/filipBio.jpg',
+    name: 'Céline Wan Min Kee',
+    image: '/images/celineBio.png',
+  },
+  {
+    name: 'Connor Hickson',
+    image: '/images/connorBio.png',
+  },
+  {
+    name: 'Marian Tran',
+    image: '/images/marianBio.png',
+  },
+  {
+    name: 'Alexander Hnatovsky',
+    image: '/images/sashaBio.png',
+  },
+  {
+    name: 'Karishma Taneja',
+    image: '/images/karishmaBio.png',
+  },
+  {
+    name: 'Princeton Wilson',
+    image: '/images/princetonBio.png',
+  },
+  {
+    name: 'Francesca Nițică',
+    image: '/images/francescaBio.png',
+  },
+  {
+    name: 'Max von Althen',
+    image: '/images/maxBio.png',
+  },
+  {
+    name: 'Anna Turner',
+    image: '/images/annaBio.png',
+  },
+  {
+    name: 'Younes Benamour',
+    image: '/images/placeholder_pic.png',
+  },
+  {
+    name: 'Gabi Duhaime',
+    image: '/images/placeholder_pic.png',
+  },
+  {
+    name: 'Ben Hamilton',
+    image: '/images/placeholder_pic.png',
+  },
+  {
+    name: 'Andrea Dimitrev',
+    image: '/images/placeholder_pic.png',
+  },
+  {
+    name: 'Mathis Doyon',
+    image: '/images/mathisBio.png',
+  },
+  {
+    name: 'Jenna Jenkins',
+    image: '/images/placeholder_pic.png',
+  },
+  {
+    name: 'Sean Filzgerald',
+    image: '/images/placeholder_pic.png',
+  },
+  {
+    name: 'Elizabeth Mizikovsky',
+    image: '/images/placeholder_pic.png',
+  },
+  {
+    name: 'Laurent Soublière',
+    image: '/images/placeholder_pic.png',
+  },
+  {
+    name: 'Estefania Zaragoza',
+    image: '/images/estefaniaBio.png',
+  },
+  {
+    name: 'Joel Scully',
+    image: '/images/joelBio.png',
+  },
+  {
+    name: 'Gabby Khare',
+    image: '/images/placeholder_pic.png',
+  },
+  {
+    name: 'Hassan Mohamed',
+    image: '/images/placeholder_pic.png',
   }
-
 ];
 
 const VarsityTeam = () => {
@@ -89,10 +166,12 @@ const VarsityTeam = () => {
         <h4 id="teamPics" className="varsity-title">Meet the 2024–2025 Gee-Gees Team</h4>
         <div className="varsity-grid">
           {players.map((player, index) => (
-            <div className="varsity-card" key={index}>
+            <div key={index} className="varsity-player">
               <img src={player.image} alt={player.name} className="player-pic" />
-              <h5>{player.name}</h5>
-              <h6 className="text-muted">{player.role}</h6>
+              <h5 className="varsity-player-name">{player.name}</h5>
+              {(player.role === "Men's Captain" || player.role === "Female's Co-Captain") && (
+                <h6 className="varsity-captain-role">{player.role}</h6>
+              )}
             </div>
           ))}
         </div>

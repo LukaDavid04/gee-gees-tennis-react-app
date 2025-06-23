@@ -50,10 +50,15 @@ const Carousel = () => {
       <div className="carousel-track-wrapper">
         <div
           className="carousel-track"
-          style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+          style={{
+            transform: `translateX(-${currentIndex * 100}%)`,
+            width: `${100 * images.length}%`,
+          }}
         >
           {images.map((src, index) => (
-            <img key={index} src={src} alt={`Slide ${index}`} className="carousel-image" />
+            <div className="carousel-slide" key={index}>
+              <img src={src} alt={`Slide ${index}`} className="carousel-image" />
+            </div>
           ))}
         </div>
       </div>
