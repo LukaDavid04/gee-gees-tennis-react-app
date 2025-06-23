@@ -1,7 +1,7 @@
 .carousel-container {
-  margin-top: 0px;
-  margin-bottom: -15px;
-  padding: 0 20px;
+  margin-top: 0;
+  margin-bottom: -2%;
+  padding: 0 1%;
   max-width: 100%;
   overflow: hidden;
   position: relative;
@@ -10,7 +10,6 @@
 .carousel-track-wrapper {
   overflow: hidden;
   width: 100%;
-  height: auto;
   aspect-ratio: 25 / 10;
   display: flex;
   align-items: center;
@@ -24,51 +23,57 @@
   height: 100%;
 }
 
+.carousel-slide {
+  flex: 0 0 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .carousel-image {
-  min-width: 100%;
+  width: 100%;
   height: 100%;
   object-fit: contain;
   display: block;
-  flex-shrink: 0;
 }
 
 .arrow {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background-color: rgba(0, 0, 0, 0.5);
+  font-size: 2.5rem;
   color: white;
+  background: transparent;
   border: none;
-  padding: 10px;
   cursor: pointer;
-  font-size: 24px;
-  border-radius: 50%;
   z-index: 1;
-  transition: background-color 0.3s, color 0.3s;
+  padding: 0 25px;
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
 }
 
 .arrow:hover {
-  background-color: rgba(0, 0, 0, 0.8);
+  opacity: 1;
 }
 
 .arrow.left {
-  left: 10px;
+  left: 2%;
 }
 
 .arrow.right {
-  right: 10px;
+  right: 2%;
 }
 
 .indicators {
   display: flex;
   justify-content: center;
-  margin-top: 10px;
+  margin-top: 1%;
 }
 
 .indicator {
   width: 10px;
   height: 10px;
-  margin: 0 5px;
+  margin: 0 0.5%;
   border-radius: 50%;
   background-color: rgba(0, 0, 0, 0.5);
   cursor: pointer;

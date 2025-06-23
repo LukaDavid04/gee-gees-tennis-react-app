@@ -1,0 +1,27 @@
+.main-header {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #4E0B12;
+  border-bottom: 3px solid white;
+  height: 55px;
+}
+
+.geegee-title {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 35px;
+  font-family: 'Bebas Neue', sans-serif;
+  font-weight: bold;
+  white-space: nowrap;
+  color: white;
+  letter-spacing: 1px;
+}
+
+.language-options {
+  display: flex;
+  gap: 10px;
+}
