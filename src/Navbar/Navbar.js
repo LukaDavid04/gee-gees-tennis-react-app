@@ -12,11 +12,14 @@ const Navbar = () => {
   return (
     <nav className="navbar">
       <div className="navbar-header">
-        <img
-          src="/images/geegees_logo_white.png"
-          alt="Gee-Gees Tennis Logo"
-          className="logo"
-        />
+        {/* Make logo a link to homepage */}
+        <Link to="/" onClick={() => setIsMenuOpen(false)}>
+          <img
+            src="/images/geegees_logo_white.png"
+            alt="Gee-Gees Tennis Logo"
+            className="logo"
+          />
+        </Link>
         <button
           className="hamburger"
           onClick={toggleMenu}
