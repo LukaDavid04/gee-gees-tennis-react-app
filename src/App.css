@@ -3,16 +3,16 @@ body {
     margin: 0;
     padding: 0;
   }
-  
+
   h1, h2, h3 {
     font-family: 'Bebas Neue', sans-serif;
   }
-  
+
   .container {
     max-width: 1200px;
     margin: 0 auto;
   }
-  
+
   img {
     max-width: 100%;
     height: auto;
@@ -31,4 +31,10 @@ html, body {
 
 footer {
   margin-top: auto;
+}
+
+/* for headers with links */
+.anchor-target {
+  scroll-margin-top: 100px;
+  padding-top: 20px;
 }

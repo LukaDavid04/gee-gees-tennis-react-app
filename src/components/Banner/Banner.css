@@ -1,0 +1,135 @@
+.custom-banner {
+    background: linear-gradient(to bottom, #4E0B12 0%, #6d1a24 100%);
+    padding: 40px 0 60px;
+    color: white;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.banner-content {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 20px;
+    position: relative;
+    z-index: 2;
+}
+
+.banner-title-wrapper {
+    margin-bottom: 30px;
+}
+
+.banner-title h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin: 0;
+    padding: 0;
+    text-transform: uppercase;
+}
+
+.banner-divider {
+    width: 120px;
+    height: 4px;
+    background: rgba(255, 255, 255, 0.7);
+    margin: 20px auto;
+    border-radius: 2px;
+}
+
+.banner-text {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.banner-text a {
+    position: relative;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    padding-bottom: 2px;
+    display: inline-block;
+}
+
+.banner-text a:hover {
+    color: white;
+}
+
+.banner-text a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: white;
+    transition: width 0.3s ease;
+}
+
+.banner-text a:hover::after {
+    width: 100%;
+}
+
+.banner-text p,
+.banner-text a {
+    font-size: 1.2rem;
+    line-height: 1.7;
+    text-align: center;
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .custom-banner {
+        padding: 80px 0 40px;
+    }
+
+    .banner-title h1 {
+        font-size: 2.5rem;
+    }
+
+    .banner-text p,
+    .banner-text a {
+        font-size: 1rem;
+    }
+
+    .banner-text a::after {
+        display: none !important;
+    }
+}
+
+/* for pages with links in the header */
+.banner-link {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+    position: relative;
+    padding-bottom: 2px;
+    display: inline-block;
+    font-family: inherit;
+    text-decoration: none;
+}
+
+.banner-link:hover {
+    color: #fff;
+}
+
+.banner-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: white;
+    transition: width 0.3s ease;
+}
+
+.banner-link:hover::after {
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    .banner-link::after {
+        display: none !important;
+    }
+}

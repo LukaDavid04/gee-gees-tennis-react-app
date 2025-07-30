@@ -1,10 +1,10 @@
-.navbar {
+.custom-navbar {
   background-color:#4E0B12;
   color: white;
   padding: 10px 20px;
 }
 
-.navbar-header {
+.custom-navbar-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -29,7 +29,7 @@
   color: #35070c;
 }
 
-.nav-menu {
+.custom-nav-menu {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -39,16 +39,16 @@
   background-color: #4E0B12;
   flex-wrap: wrap;
   border-top: 1px solid white;
-  margin-left: -20px; 
-  margin-right: -20px; 
-  padding-left: 20px;  
+  margin-left: -20px;
+  margin-right: -20px;
+  padding-left: 20px;
   padding-right: 20px;
 }
 
-.nav-menu a {
+.custom-nav-menu a {
   text-decoration: none;
   color: white;
-  padding: 0px 12px;
+  padding: 0 12px;
   font-family: 'Bebas Neue', sans-serif;
   font-size: 20px;
 }
