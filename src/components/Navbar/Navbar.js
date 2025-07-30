@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './Navbar.css';
+import { NavLink } from 'react-router-dom';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -8,39 +9,44 @@ const Navbar = () => {
     setIsMenuOpen((prev) => !prev);
   };
 
-  return (
-    <nav className="navbar">
-      <div className="navbar-header">
-        {/* Replace text with logo image */}
-        <img
-          src="/images/geegees_logo_white.png"
-          alt="Gee-Gees Tennis Logo"
-          className="logo"
-        />
-        <button
-          className="hamburger"
-          onClick={toggleMenu}
-          aria-expanded={isMenuOpen}
-          aria-label="Toggle navigation"
-        >
-          &#9776;
-        </button>
-      </div>
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+  };
 
-      {isMenuOpen && (
-        <div className="nav-menu">
-          <a href="#home">HOME</a>
-          <a href="#varsity-team">VARSITY TEAM</a>
-          <a href="#recreational-team">RECREATIONAL TEAM</a>
-          <a href="#coaches">COACHES</a>
-          <a href="#executive-team">EXECUTIVE TEAM</a>
-          <a href="#club-policy">CLUB POLICY</a>
-          <a href="#sponsors">SPONSORS</a>
-          <a href="#outreach">OUTREACH</a>
-          <a href="#faq">FAQ</a>
+  return (
+      <nav className="custom-navbar">
+        <div className="custom-navbar-header">
+          <NavLink to="/" onClick={closeMenu}>
+            <img
+                src="/images/geegees_logo_white.png"
+                alt="Gee-Gees Tennis Logo"
+                className="logo"
+            />
+          </NavLink>
+          <button
+              className="hamburger"
+              onClick={toggleMenu}
+              aria-expanded={isMenuOpen}
+              aria-label="Toggle navigation"
+          >
+            &#9776;
+          </button>
         </div>
-      )}
-    </nav>
+
+        {isMenuOpen && (
+            <div className="custom-nav-menu">
+              <NavLink to="/" onClick={closeMenu}>HOME</NavLink>
+              <NavLink to="/varsity" onClick={closeMenu}>VARSITY TEAM</NavLink>
+              <NavLink to="/recreational" onClick={closeMenu}>RECREATIONAL TEAM</NavLink>
+              <NavLink to="/coaches" onClick={closeMenu}>COACHES</NavLink>
+              <NavLink to="/exec" onClick={closeMenu}>EXECUTIVE TEAM</NavLink>
+              <NavLink to="/documents" onClick={closeMenu}>CLUB POLICY</NavLink>
+              <NavLink to="/sponsors" onClick={closeMenu}>SPONSORS</NavLink>
+              <NavLink to="/outreach" onClick={closeMenu}>OUTREACH</NavLink>
+              <NavLink to="/faq" onClick={closeMenu}>FAQ</NavLink>
+            </div>
+        )}
+      </nav>
   );
 };
 
